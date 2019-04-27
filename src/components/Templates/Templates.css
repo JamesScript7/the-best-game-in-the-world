@@ -5,11 +5,11 @@
 
 .templates-box {
   text-align: center;
-  color: #303030;
+  color: var(--color-darkgray);
   padding: 10px;
 }
 
-/* EXAMPLES SECTION */
+/* -> EXAMPLES SECTION */
 .tips {
   padding: 10px;
   display: flex;
@@ -25,9 +25,9 @@
   width: 104px;
   height: 130px;
   margin: 3px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid var(--color-lightgray);
   border-radius: 8px;
-  color: #3C4F6F;
+  color: var(--color-astronaught);
   display: grid;
   justify-content: center;
 }
@@ -37,10 +37,10 @@
 }
 
 .tips div:hover {
-  background-color: #F0F8FF;
+  background-color: var(--color-aliceblue);
 }
 
 .tips img:hover {
   transform: scale(1.05);
 }
-/* EXAMPLES SECTION */
+/* <- EXAMPLES SECTION */

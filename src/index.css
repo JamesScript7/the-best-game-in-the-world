@@ -1,9 +1,20 @@
 /* global scope variables */
 :root {
     /* color */
+    --color-aliceblue: #f0f8ff;
+    --color-astronaught: #3c4f6f;
+    --color-darkgray: #383838;
+    --color-githubgreen: #228b22;
+    --color-gray: #808080;
+    --color-lightgray: #d3d3d3;
+    --color-lightyellow-green: #95cc5d;
+    --color-nightrider: #303030;
+    --color-orange: #ffa500;
+    --color-snow: #fffafa;
+    --color-twitterblue: #48c1f0;
+    --color-red: #dc143c;
     --color-white: #fff;
     --color-yellow: #ffff00;
-    /* button */
 }
 
 * {

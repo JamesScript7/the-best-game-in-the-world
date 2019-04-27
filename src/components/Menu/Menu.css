@@ -1,6 +1,6 @@
 .menu-box {
   text-align: center;
-  color: #303030;
+  color: var(--color-nightrider);
 }
 
 .menu-btns button {
@@ -9,7 +9,7 @@
   width: 80%;
   margin-bottom: 30px;
   padding: 16px;
-  color: #FFFAFA;
+  color: var(--color-snow);
   background-color: var(--color-white);
   border: 2px solid;
   border-radius: 40px;
@@ -20,93 +20,93 @@
   outline: none;
 }
 
-/* START */
+/* -> START */
 .menu-btns button.start {
   color: var(--color-white);
-  background-color: #95CC5D;
-  border-color: #95CC5D;
+  background-color: var(--color-lightyellow-green);
+  border-color: var(--color-lightyellow-green);
 }
 
 .menu-btns button.start:hover {
-  color: #95CC5D;
+  color: var(--color-lightyellow-green);
   background-color: var(--color-white);
 }
-/* START */
+/* <- START */
 
-/* PAUSE */
+/* -> PAUSE */
 .menu-btns button.pause {
   color: var(--color-white);
-  background-color: #FFA500;
-  border: 2px solid #FFA500;
+  background-color: var(--color-orange);
+  border: 2px solid var(--color-orange);
 }
 
 .menu-btns button.pause:hover {
-  color: #FFA500;
+  color: var(--color-orange);
   background-color: var(--color-white);
 }
-/* PAUSE */
+/* <- PAUSE */
 
-/* RESUME */
+/* ->RESUME */
 .menu-btns button.resume {
   color: var(--color-white);
-  background-color: #3C4F6F;
-  border-color: #3C4F6F;
+  background-color: var(--color-astronaught);
+  border-color: var(--color-astronaught);
 }
 
 .menu-btns button.resume:hover {
-  color: #3C4F6F;
+  color: var(--color-astronaught);
   background-color: var(--color-white);
 }
-/* RESUME */
+/* <-RESUME */
 
-/* RESET */
+/* -> RESET */
 .menu-btns button.reset {
   color: var(--color-white);
-  background-color: #DC143C;
-  border-color: #DC143C;
+  background-color: var(--color-red);
+  border-color: var(--color-red);
 }
 
 .menu-btns button.reset:hover {
-  color: #DC143C;
+  color: var(--color-red);
   background-color: var(--color-white);
 }
-/* RESET */
+/* <- RESET */
 
-/* COMPARE */
+/* -> COMPARE */
 .menu-btns button.compare {
   color: var(--color-white);
-  background-color: #48C1F0;
-  border-color: #48C1F0;
+  background-color: var(--color-twitterblue);
+  border-color: var(--color-twitterblue);
 }
 
 .menu-btns button.compare:hover {
-  color: #48C1F0;
+  color: var(--color-twitterblue);
   background-color: var(--color-white);
 }
-/* COMPARE */
+/* <- COMPARE */
 
-/* RANDOMIZE */
+/* -> RANDOMIZE */
 .menu-btns button.randomize {
     color: var(--color-white);
-    background-color: #383838;
-    border-color: #383838;
+    background-color: var(--color-darkgray);
+    border-color: var(--color-darkgray);
 }
 
 .menu-btns button.randomize:hover {
-  color: #383838;
+  color: var(--color-darkgray);
   background-color: var(--color-white);
 }
-/* RANDOMIZE */
+/* <- RANDOMIZE */
 
-/* LOCKED BUTTONS */
+/* -> LOCKED BUTTONS */
 .menu-btns button.randomize.lock,
 .menu-btns button.start.lock,
 .menu-btns button.pause.lock,
 .menu-btns button.resume.lock,
 .menu-btns button.reset.lock,
 .menu-btns button.compare.lock {
-  color: #808080;
-  background-color: #D3D3D3;
-  border: 2px solid #D3D3D3;
+  color: var(--color-gray);
+  background-color: var(--color-lightgray);
+  border: 2px solid var(--color-lightgray);
 }
-/* LOCKED BUTTONS */
+/* <- LOCKED BUTTONS */
