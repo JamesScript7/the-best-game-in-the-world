@@ -17,11 +17,12 @@ class App extends Component {
       compare: false,
       cells: false,
       cellCount: 0,
-      dragItem: null
+      dragItem: null,
     }
 
-    this.size = { rowLen: 50, colLen: 50 }
-    this.turnSpeed = 80
+    this.size = { rowLen: 50, colLen: 50 };
+    this.turnSpeed = 80;
+    // TODO: Move these to another file
     // TEMPLATES
     this.replicator = [[null,null,1,1,1],[null,1,null,null,1],[1,null,null,null,1],[1,null,null,1,null],[1,1,1,null,null]];
     this.spaceship = [[null,1,1,1,1],[1,null,null,null,1],[null,null,null,null,1],[1,null,null,1,null]];
@@ -31,9 +32,12 @@ class App extends Component {
     this.exploder = [[null,1,null],[1,1,1],[1,null,1],[null,1,null]];
     this.combo = [[null,1,1,1,1],[1,null,null,null,1],[null,1,null,null,1],[1,1,null,1,null],[null,1,null,null,null]];
   }
+
+  // TODO: This can be moved into utility file with adjustable parameters
   generateNum() {
     return Math.ceil(Math.random() * 4);
   }
+
   initializeGame(size, random) {
     // Populate approximately 25%, which is around 625, out of 2,500 cells
     const { rowLen, colLen } = size;
@@ -62,6 +66,7 @@ class App extends Component {
 
     return initialGrid;
   }
+
   generateTemplate(e, gridRow, gridCell) {
     const { grid, start, cellCount, dragItem } = this.state
     if (!start) return;
@@ -132,9 +137,10 @@ class App extends Component {
 
     this.setState({
       grid: [templateGrid],
-      cellCount: count
+      cellCount: count,
     });
   }
+
   populateCell(e) {
     const { grid, start, cellCount } = this.state;
     if (!start) return;
@@ -156,14 +162,15 @@ class App extends Component {
     this.setState({
       grid: [populateGrid],
       cells: true,
-      cellCount: cellNum
+      cellCount: cellNum,
     });
   }
+
   handleClick(e) {
     const { start, pause, compare, cellCount } = this.state;
-    const buttonClicked = e.target.innerText;
+    const button = e.target.innerText;
 
-    switch(buttonClicked) {
+    switch(button) {
       case 'RANDOMIZE':
         if (!start) return;
         const randomGrid = this.initializeGame(this.size, true);
@@ -172,7 +179,7 @@ class App extends Component {
         this.setState({
           grid: [randomGrid],
           cells: true,
-          cellCount: 625
+          cellCount: 625,
         });
 
         break;
@@ -184,7 +191,7 @@ class App extends Component {
 
           this.setState({
             start: !start,
-            pause: !pause
+            pause: !pause,
           });
         }
 
@@ -207,7 +214,7 @@ class App extends Component {
 
         this.setState({
           pause: !pause,
-          compare: false
+          compare: false,
         });
 
         break;
@@ -224,7 +231,7 @@ class App extends Component {
           pause: false,
           compare: false,
           cells: false,
-          cellCount: 0
+          cellCount: 0,
         });
 
         break;
@@ -239,6 +246,7 @@ class App extends Component {
         console.log('Something went wrong!');
     }
   }
+
   gameLoop() {
     const { rowLen, colLen } = this.size;
 
@@ -259,11 +267,12 @@ class App extends Component {
 
       this.setState({
         grid: [...this.state.grid, newGrid],
-        turnNumber: this.state.turnNumber + 1
+        turnNumber: this.state.turnNumber + 1,
       });
 
     }, this.turnSpeed);
   }
+
   brain(row, col, arr) {
     let grid;
 
@@ -297,10 +306,12 @@ class App extends Component {
     else
       return (neighborCount !== 0 && neighborCount % 3 === 0) ? 1 : null;
   }
+
   onDragStart(e) {
     const dragItem = e.target.getAttribute('alt');
     this.setState({ dragItem });
   }
+
   onDragDrop(e) {
     e.preventDefault(); // Needed in FireFox
     const row = e.target.getAttribute('data-row');
@@ -308,6 +319,7 @@ class App extends Component {
     // console.log(row, cell);
     this.generateTemplate(null, row, cell);
   }
+
   render() {
     const { grid, turnNumber, start, pause, compare, cellCount } = this.state;
     const currentGrid = grid.length - 1;

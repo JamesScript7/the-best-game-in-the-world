@@ -1,3 +1,11 @@
+/* global scope variables */
+:root {
+    /* color */
+    --color-white: #fff;
+    --color-yellow: #ffff00;
+    /* button */
+}
+
 * {
   box-sizing: border-box;
 }

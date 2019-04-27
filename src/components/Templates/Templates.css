@@ -2,6 +2,7 @@
 .menu-box p {
   margin: 0 0 8px 0;
 }
+
 .templates-box {
   text-align: center;
   color: #303030;
@@ -15,9 +16,11 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .tips p {
   margin: 6px 0 4px 0;
 }
+
 .tips div {
   width: 104px;
   height: 130px;
@@ -28,13 +31,16 @@
   display: grid;
   justify-content: center;
 }
+
 .tips img {
   margin: 0 auto;
 }
+
 .tips div:hover {
   background-color: #F0F8FF;
 }
+
 .tips img:hover {
-  /* transform: scale(1.05); */
+  transform: scale(1.05);
 }
 /* EXAMPLES SECTION */

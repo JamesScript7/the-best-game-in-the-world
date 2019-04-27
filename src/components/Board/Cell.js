@@ -4,6 +4,7 @@ const Cell = ({row, r, populateCell, onDragDrop}) => {
   function onDragEnterOver(e){
     e.preventDefault();
   }
+
   return (
     row.map((column, j) => {
       return <div
